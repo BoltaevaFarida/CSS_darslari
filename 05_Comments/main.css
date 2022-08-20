@@ -1,0 +1,9 @@
+/*Universal selector*/
+* {
+    color: blue;
+}
+
+/* Tag selector*/
+h1 {
+    color: green;
+}
