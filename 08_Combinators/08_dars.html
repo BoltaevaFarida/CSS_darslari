@@ -4,24 +4,63 @@
         <title>CSS asoslari</title>
         <link rel="stylesheet" href="main.css">
         <style>
-            body {
-                font-family: sans-serif;
+            /* Avlod selektori stili*/
+            div  p {
+                background-color: yellow;
             }
-            div {
-                color: red;
+            /* Child selektori stili */
+            .v > .c {
+                background-color: green;
             }
-            p {
-                color: green;
+            /* Adjecent sibling selektori stili */
+            .m ~ .n {
+                background-color: blue;
+            }
+            .j {
+                background-color: white;
             }
         </style>
     </head>
     <body>
-            
-        <section>
-        <div>
-            <p>Paragraf 1: "div"ni ichida.</p>
-            <p></p>
-        </div>
-    </section>
+            <h2>Avlod selektori</h2>
+            <p>Belgilangan elementning avlodlari bo'lgan barcha elementlarni tanlab oladi</p>
+        
+            <div>
+              <p>Paragraf 1: "div"ni ichida.</p>
+              <p>Paragraf 2: "div"ni ichida.</p>
+              <section>
+                     <p>Paragraf 3: "div"ni ichida.</p>
+              </section>
+            </div>
+
+            <p>Paragraf 4: "div"ni ichida emas.</p>
+            <p>Paragraf 5: "div"ni ichida emas.</p>
+--------------------------------------------------------------------------------------------------
+            <h2>Child selektori</h2>
+            <p>Belgilangan elementning aynan farzandi bo'lgan barcha elementlarni tanlab oladi</p>
+    
+            <div class="v">
+              <p class="c">Paragraf 1: "div"ni ichida.</p>
+              <p class="c">Paragraf 2: "div"ni ichida.</p>
+              <section>
+                     <p class="j">Paragraf 3: "div"ni ichida.</p>
+              </section>
+              <p class="c">Paragraf 4: 'div'ni ichida.</p>
+            </div>
+
+            <p>Paragraf 5: "div"ni ichida emas.</p>
+            <p>Paragraf 6: "div"ni ichida emas.</p>
+            </div>
+--------------------------------------------------------------------------------------------------
+            <h2>Adjacet sibling selector (Umumiy qardosh selektori)</h2>
+            <p>Belgilangan elementga qo'shni bo'lgan barcha elementlarni tanlab oladi</p>
+            <p>Paragraf 1: "div"ni ichida emas.</p>
+
+            <div class="m">
+                <p class="j">Paragraf 2: "div"ni ichida.</p>
+            </div>
+            <p class="n">Paragraf 3: "div"dan keyin.</p>
+            <h3>Qndaydir sarlavha</h3>
+            <p class="n">Paragraf 4: "div"dan keyin</p>
     </body>
 </html>
